@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<head>
+
+        <style>
+    
+                @import url('https://fonts.googleapis.com/css?family=Jockey+One&display=swap');
+                @import url('https://fonts.googleapis.com/css?family=Carrois+Gothic+SC&display=swap');
+                @import url('https://fonts.googleapis.com/css?family=Teko&display=swap');
+                @import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
+                
+                *{
+                    margin: 0;
+                    padding: 0;
+                }
+                
+                /* -----INICIO----- */
+                
+                /*imagem do topo (serve para mudar todas as HTML)*/
+                
+                #header1 img {
+                    width: 100%;
+                }
+                
+                /*menu de navegação (serve para mudar todas as HTML)*/
+                
+                ul {
+                    list-style-type: none;
+                    margin: 0;
+                    padding-left: 50px;
+                    overflow: hidden;
+                    background-color: rgb(26, 26, 26);
+                    transform: translateY(-10px);
+                }
+                  
+                li {
+                    float: left;
+                }
+                  
+                li a {
+                    font-family: 'Carrois Gothic SC', sans-serif;
+                    display: block;
+                    color: white;
+                    text-align: center;
+                    padding: 20px 16px 20px;
+                    text-decoration: none;
+                    transition: 0.4s;
+                    text-transform: uppercase;
+                }
+                  
+                li a:hover {
+                    background-color: rgb(49, 49, 49);
+                }
+                
+                .active{
+                    background: rgb(68, 68, 68);
+                    color: rgb(12, 179, 129);
+                    cursor: not-allowed;
+                    display: block;
+                }
+                .active:hover{
+                    background: rgb(68, 68, 68);
+                }
+                
+                .discord{
+                    font-family: 'Carrois Gothic SC', sans-serif;
+                    display: block;
+                    color: white;
+                    padding: 20px 16px 20px;
+                    text-decoration: none;
+                    transition: 0.4s;
+                    text-transform: uppercase;
+                    float: right;
+                    color: rgb(166, 190, 211);
+                    transition: 0.5s;
+                    cursor: pointer;
+                    font-weight: 100;
+                }
+                
+                .discord:hover{
+                    color: rgb(87, 137, 182);
+                }
+                /*conteúdo (serve para mudar todas as HTML)*/
+                
+                #conteudo{
+                    background: url(imgs/conteudobackground.png)no-repeat;
+                    background-size: cover;
+                    background-attachment: fixed;
+                    height: 100%;
+                    padding: 20px 30px 20px 30px;
+                    margin: 0;
+                    transform: translateY(-10px);
+                }
+                
+                #conteudo h1{
+                    font-family: 'Teko', sans-serif;
+                    font-size: 40px;
+                    text-transform: uppercase;
+                }
+                
+                #conteudo h2{
+                    font-family: 'Abel', sans-serif;
+                    color: rgb(160, 160, 160);
+                    font-style: italic;
+                    font-size: 18px;
+                    font-weight: 100;
+                }
+                
+                #conteudo h2::after{
+                    content: '';
+                    background: rgb(201, 201, 201);
+                    display: block;
+                    margin-top: 20px;
+                    margin-bottom: 30px;
+                    height: 2px;
+                    width: 97vw;
+                }
+                
+                #conteudo h3{
+                    font-family: 'Teko', sans-serif;
+                    font-size: 25px;
+                    margin-bottom: 20px;
+                }
+                
+                #conteudo pre{
+                    font-family: 'Abel', sans-serif;
+                    margin-bottom: 20px;
+                    font-size: 20px;
+                    text-align: left;
+                }
+                
+                #conteudo pre::after{
+                    content: '';
+                    background: rgb(201, 201, 201);
+                    display: block;
+                    margin-top: 20px;
+                    margin-bottom: 30px;
+                    height: 2px;
+                    width: 97vw;
+                }
+                
+                #conteudo p{
+                    font-style: italic;
+                    font-weight: 600;
+                }
+                
+                #conteudo a{
+                    color: rgb(0, 92, 54);
+                    font-weight: 600;
+                    font-style: italic;
+                }
+                
+                #conteudo b{
+                    font-weight: 600;
+                    font-size: 20px;
+                    padding-right: 60px;
+                }
+                
+                /*Footer (pé da página)
+                #footer{
+                    background: rgb(26, 26, 26);
+                    height: 30px;
+                    padding: 20px 10px 30px 10px;
+                }
+                
+                #footer h1{
+                    font-family: 'Abel', sans-serif;
+                    font-size: 20px;
+                    float: left;
+                    color: white;
+                    text-transform: uppercase;
+                }
+                
+                #footer h2{
+                    font-family: 'Abel', sans-serif;
+                    font-size: 20px;
+                    float: left;
+                    color: rgb(85, 85, 85);
+                    margin-left: 10px;
+                    padding: 0;
+                }
+                
+                #footer pre{
+                    font-family: 'Abel', sans-serif;
+                    font-size: 15px;
+                    float: right;
+                    color: grey;
+                }*/
+                
+                /* COMANDOS */
+                /* tabela */
+                
+                #tabela{
+                    border-collapse: collapse;
+                    width: 100%;
+                    cursor: default; 
+                    margin-bottom: 30px;  
+                }
+                
+                #tabela td, #tabela th {     
+                    border: 2px solid rgb(175, 175, 175, 0.3);
+                    padding: 8px;
+                }
+                
+                #tabela th {
+                    width: 100px;
+                    font-family: 'Abel', sans-serif;
+                    font-size: 20px;
+                    font-weight: 600;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                    text-align: left;
+                    color: rgb(0, 0, 0);
+                }
+                
+                #tabela td{
+                    font-family: 'Abel', sans-serif; 
+                    font-size: 20px;
+                    font-weight: 100;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                    text-align: left;
+                    color: rgb(0, 0, 0);
+                }
+                
+                /* CÓDIGO PENAL */
+                
+                /* barra de pesquisa */
+                #search {
+                    resize: both;
+                    width: 200px;
+                    font-size: 16px;
+                    padding: 12px 20px 12px 40px;
+                    border: 1px solid rgb(221, 221, 221);
+                    color: rgb(0, 126, 84);
+                    margin-bottom: 12px;
+                    border-radius: 30px;
+                    outline: none;
+                    float: right;
+                }
+                  
+                  #tabelapenal {
+                    border-collapse: collapse;
+                    width: 100%;
+                    border: 1px solid #ddd;
+                    font-size: 18px;
+                }
+                  
+                  #tabelapenal th, #tabelapenal td {
+                    text-align: left;
+                    padding: 12px;
+                }
+                  
+                  #tabelapenal tr {
+                    border-bottom: 1px solid #ddd; 
+                }
+                  
+                  #tabelapenal tr.header, #tabelapenal tr:hover {
+                    background-color: #f1f1f1;
+                }
+                
+                /* tabela */
+                
+                #tabelapenal {
+                    border-collapse: collapse;
+                    width: 100%;
+                    cursor: default; 
+                    margin-bottom: 30px;
+                  }
+                  
+                  #tabelapenal td, #tabelapenal th {
+                      
+                    border: 2px solid rgb(175, 175, 175, 0.3);
+                    padding: 8px;
+                  }
+                  
+                  #tabelapenal tr:nth-child(even){background-color: rgb(207, 207, 207,0.5);}
+                  
+                  
+                  #tabelapenal th {
+                    font-family: 'Teko', sans-serif;
+                    font-size: 25px;
+                    font-weight: 100;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                    text-align: left;
+                    color: rgb(0, 0, 0);
+                  }
+                
+                  #tabelapenal td{
+                    width: 150px;
+                    font-family: 'Abel', sans-serif; 
+                    font-size: 20px;
+                    font-weight: 100;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                    text-align: left;
+                    color: rgb(0, 0, 0);
+                  }
+                  .tooltip {
+  position: relative;
+  display: inline-block; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: rgb(39, 39, 39);
+  color: rgb(1, 231, 155);
+  text-align: center;
+  font-weight: 100;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 1%;
+  margin-bottom: -5px;
+  left: 60%;
+  margin-left: 20px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%; /* To the left of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent rgb(39, 39, 39) transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+                
+</style>
+
+<body>
+
+<!---imagem to topo--->
+
+<header id="header1"><img src="headerbackground.png"></header>
+
+<!---menu de navegação--->
+
+<ul id="navbar">
+    <li><a href="jobsfordummies.html">Início</a></li>
+    <li><a href="rulesforassholes.html">Regras</a></li>
+    <li><a class="active" title="Você já está nos comandos!">Comandos</a></li>
+    <li><a href="laws.html">Código Penal</a></li>
+</ul>
+
+<!----Footer (pé da página)
+
+<ul id="footer">
+    <h1>Wise City ©</h1>
+    <pre>Versão 1.0</pre>
+    <h2>Todos os direitos reservados.</h2>
+</ul>---->
+
+<!-----Conteúdo da página----->
+
+<section id="conteudo">
+
+    <h1>Comandos por texto</h1>
+    <h2>Abaixo estão alguns comandos que você pode usar pelo chat dentro do jogo</h2>
+
+    <h3>Comandos usuais:</h3>
+    
+        <table id='tabela'>
+        <tr>
+        <th>/roupa<div class="tooltip" style="margin-left: 20px; color: lightgrey"><i class="far fa-question-circle"></i>
+            <span class="tooltiptext">Ex: /roupa mascara 40
+            </span>
+            </div></th>
+        <td>Funciona para trocar as peças de roupa pelo número ID dela (funciona para jaqueta, camisas, máscaras, capacete, etc) <a style="font-size: 14px; font-weight: 100" href="https://wiki.rage.mp/index.php?title=Clothes">Como sei o id da peça de roupa?</a></td>
+        </tr>
+        </table>
+
+    <h3>Comandos para comunicação:</h3>
+    
+        <table id='tabela'>
+        <tr>
+        <th>/forarp</th>
+        <td>Fora do RP (Falar fora do personagem ou reportar algo de anti-rp)</td>
+        </tr>
+        <tr>
+        <th>/twt</th>
+        <td>Bate-Papo (Dentro do RP)</td>
+        </tr>
+        <tr>
+        <th>/ilegal</th>
+        <td>Totalmente anônimo para realizar venda de armas, comprar informação de drogas, etc (Dentro do RP)</td>
+        </tr>
+        <tr>
+        <th>/olx</th>
+        <td>Anunciar vendas (Dentro do RP)</td>
+        </tr>
+        <tr>
+        <th>/911</th>
+        <td>Escrever denúncia para a Polícia (Dentro do RP)</td>
+        </tr>
+        <tr>
+        <th>/121</th>
+        <td>Pedir por socorro para o DHHS (Dentro do RP)</td>
+        </tr>
+        </table>
+
+    <h1>Comandos por teclas (hotkeys)</h1>
+    <h2>Abaixo estão alguns comandos que você pode usar pelo teclado dentro do jogo</h2>
+
+    <h3>Comandos de animações:</h3>
+    <table id='tabela'>
+        <tr>
+        <th>[F1]</th>
+        <td>Faz com que seu personagem fique em posição de guarda</td>
+        </tr>
+        <tr>
+        <th>[F2]</th>
+        <td>Faz com que seu personagem coloque a mão na cabeça</td>
+        </tr>
+        <tr>
+        <th>[F6]</th>
+        <td> Faz com que seu personagem mostre o dedo do meio</td>
+        </tr>
+        <tr>
+        <th>[F10]</th>
+        <td>Faz com que seu personagem cruze os braços</td>
+        </tr>
+        <tr>
+        <th>[X]</th>
+        <td> Faz com que seu personagem levante as mãos</td>
+        </tr>
+        <tr>
+        <th>[Z]</th>
+        <td>Faz com que seu personagem desmaie</td>
+        </tr>
+        </table>
+
+    <h3>Comandos usuais:</h3>
+    <table id='tabela'>
+        <tr>
+        <th>[SHIFT]</th>
+        <td>Modo Drift</td>
+        </tr>
+        <tr>
+        <th>[Num9]</th>
+        <td>Desativa/Ativa o Modo Drift (já vem ativo)</td>
+        </tr>
+        <tr>
+        <th>[L]</th>
+        <td>Abre o celular</td>
+        </tr>
+        <tr>
+        <th>[K]</th>
+        <td>Abre o menu de jogador</td>
+        </tr>
+        <tr>
+
+</section>
+
+</body>
+</head>
+</html>

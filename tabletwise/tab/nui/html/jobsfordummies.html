@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<head>
+
+        <style>
+    
+                @import url('https://fonts.googleapis.com/css?family=Jockey+One&display=swap');
+                @import url('https://fonts.googleapis.com/css?family=Carrois+Gothic+SC&display=swap');
+                @import url('https://fonts.googleapis.com/css?family=Teko&display=swap');
+                @import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
+                
+                *{
+                    margin: 0;
+                    padding: 0;
+                }
+                
+                /* -----INICIO----- */
+                
+                /*imagem do topo (serve para mudar todas as HTML)*/
+                
+                #header1 img {
+                    width: 100%;
+                }
+                
+                /*menu de navegação (serve para mudar todas as HTML)*/
+                
+                ul {
+                    list-style-type: none;
+                    margin: 0;
+                    padding-left: 50px;
+                    overflow: hidden;
+                    background-color: rgb(26, 26, 26);
+                    transform: translateY(-10px);
+                }
+                  
+                li {
+                    float: left;
+                }
+                  
+                li a {
+                    font-family: 'Carrois Gothic SC', sans-serif;
+                    display: block;
+                    color: white;
+                    text-align: center;
+                    padding: 20px 16px 20px;
+                    text-decoration: none;
+                    transition: 0.4s;
+                    text-transform: uppercase;
+                }
+                  
+                li a:hover {
+                    background-color: rgb(49, 49, 49);
+                }
+                
+                .active{
+                    background: rgb(68, 68, 68);
+                    color: rgb(12, 179, 129);
+                    cursor: not-allowed;
+                    display: block;
+                }
+                .active:hover{
+                    background: rgb(68, 68, 68);
+                }
+                
+                .discord{
+                    font-family: 'Carrois Gothic SC', sans-serif;
+                    display: block;
+                    color: white;
+                    padding: 20px 16px 20px;
+                    text-decoration: none;
+                    transition: 0.4s;
+                    text-transform: uppercase;
+                    float: right;
+                    color: rgb(166, 190, 211);
+                    transition: 0.5s;
+                    cursor: pointer;
+                    font-weight: 100;
+                }
+                
+                .discord:hover{
+                    color: rgb(87, 137, 182);
+                }
+                /*conteúdo (serve para mudar todas as HTML)*/
+                
+                #conteudo{
+                    background: url(imgs/conteudobackground.png)no-repeat;
+                    background-size: cover;
+                    background-attachment: fixed;
+                    height: 100%;
+                    padding: 20px 30px 20px 30px;
+                    margin: 0;
+                    transform: translateY(-10px);
+                }
+                
+                #conteudo h1{
+                    font-family: 'Teko', sans-serif;
+                    font-size: 40px;
+                    text-transform: uppercase;
+                }
+                
+                #conteudo h2{
+                    font-family: 'Abel', sans-serif;
+                    color: rgb(160, 160, 160);
+                    font-style: italic;
+                    font-size: 18px;
+                    font-weight: 100;
+                }
+                
+                #conteudo h2::after{
+                    content: '';
+                    background: rgb(201, 201, 201);
+                    display: block;
+                    margin-top: 20px;
+                    margin-bottom: 30px;
+                    height: 2px;
+                    width: 97vw;
+                }
+                
+                #conteudo h3{
+                    font-family: 'Teko', sans-serif;
+                    font-size: 25px;
+                    margin-bottom: 20px;
+                }
+                
+                #conteudo pre{
+                    font-family: 'Abel', sans-serif;
+                    margin-bottom: 20px;
+                    font-size: 20px;
+                    text-align: left;
+                }
+                
+                #conteudo pre::after{
+                    content: '';
+                    background: rgb(201, 201, 201);
+                    display: block;
+                    margin-top: 20px;
+                    margin-bottom: 30px;
+                    height: 2px;
+                    width: 97vw;
+                }
+                
+                #conteudo p{
+                    font-style: italic;
+                    font-weight: 600;
+                }
+                
+                #conteudo a{
+                    color: rgb(0, 92, 54);
+                    font-weight: 600;
+                    font-style: italic;
+                }
+                
+                #conteudo b{
+                    font-weight: 600;
+                    font-size: 20px;
+                    padding-right: 60px;
+                }
+                
+                /*Footer (pé da página)
+                #footer{
+                    background: rgb(26, 26, 26);
+                    height: 30px;
+                    padding: 20px 10px 30px 10px;
+                }
+                
+                #footer h1{
+                    font-family: 'Abel', sans-serif;
+                    font-size: 20px;
+                    float: left;
+                    color: white;
+                    text-transform: uppercase;
+                }
+                
+                #footer h2{
+                    font-family: 'Abel', sans-serif;
+                    font-size: 20px;
+                    float: left;
+                    color: rgb(85, 85, 85);
+                    margin-left: 10px;
+                    padding: 0;
+                }
+                
+                #footer pre{
+                    font-family: 'Abel', sans-serif;
+                    font-size: 15px;
+                    float: right;
+                    color: grey;
+                }*/
+                
+                /* COMANDOS */
+                /* tabela */
+                
+                #tabela{
+                    border-collapse: collapse;
+                    width: 100%;
+                    cursor: default; 
+                    margin-bottom: 30px;  
+                }
+                
+                #tabela td, #tabela th {     
+                    border: 2px solid rgb(175, 175, 175, 0.3);
+                    padding: 8px;
+                }
+                
+                #tabela th {
+                    width: 100px;
+                    font-family: 'Abel', sans-serif;
+                    font-size: 20px;
+                    font-weight: 600;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                    text-align: left;
+                    color: rgb(0, 0, 0);
+                }
+                
+                #tabela td{
+                    font-family: 'Abel', sans-serif; 
+                    font-size: 20px;
+                    font-weight: 100;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                    text-align: left;
+                    color: rgb(0, 0, 0);
+                }
+                
+                /* CÓDIGO PENAL */
+                
+                /* barra de pesquisa */
+                #search {
+                    resize: both;
+                    width: 200px;
+                    font-size: 16px;
+                    padding: 12px 20px 12px 40px;
+                    border: 1px solid rgb(221, 221, 221);
+                    color: rgb(0, 126, 84);
+                    margin-bottom: 12px;
+                    border-radius: 30px;
+                    outline: none;
+                    float: right;
+                }
+                  
+                  #tabelapenal {
+                    border-collapse: collapse;
+                    width: 100%;
+                    border: 1px solid #ddd;
+                    font-size: 18px;
+                }
+                  
+                  #tabelapenal th, #tabelapenal td {
+                    text-align: left;
+                    padding: 12px;
+                }
+                  
+                  #tabelapenal tr {
+                    border-bottom: 1px solid #ddd; 
+                }
+                  
+                  #tabelapenal tr.header, #tabelapenal tr:hover {
+                    background-color: #f1f1f1;
+                }
+                
+                /* tabela */
+                
+                #tabelapenal {
+                    border-collapse: collapse;
+                    width: 100%;
+                    cursor: default; 
+                    margin-bottom: 30px;
+                  }
+                  
+                  #tabelapenal td, #tabelapenal th {
+                      
+                    border: 2px solid rgb(175, 175, 175, 0.3);
+                    padding: 8px;
+                  }
+                  
+                  #tabelapenal tr:nth-child(even){background-color: rgb(207, 207, 207,0.5);}
+                  
+                  
+                  #tabelapenal th {
+                    font-family: 'Teko', sans-serif;
+                    font-size: 25px;
+                    font-weight: 100;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                    text-align: left;
+                    color: rgb(0, 0, 0);
+                  }
+                
+                  #tabelapenal td{
+                    width: 150px;
+                    font-family: 'Abel', sans-serif; 
+                    font-size: 20px;
+                    font-weight: 100;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                    text-align: left;
+                    color: rgb(0, 0, 0);
+                  }
+                
+                    </style>
+
+<body>
+
+<!---imagem to topo--->
+
+<header id="header1"><img src="headerbackground.png"></header>
+
+<!---menu de navegação--->
+
+<ul id="navbar">
+    <li><a class="active" title="Você já está no início!">Início</a></li>
+    <li><a href="rulesforassholes.html">Regras</a></li>
+    <li><a href="hotties.html">Comandos</a></li>
+    <li><a href="laws.html">Código Penal</a></li>
+    <li class="discord" title="Participe da nossa comunidade!"><c onclick="discord()">Já está em nosso discord? <i class="fab fa-discord"></i></c></li>
+    <script>
+    function discord(){
+        window.open('https://discord.gg/bYKVspv');
+    }
+    </script>
+</ul>
+
+<!----Footer (pé da página)
+
+<ul id="footer">
+    <h1>Wise City ©</h1>
+    <pre>Versão 1.0</pre>
+    <h2>Todos os direitos reservados.</h2>
+</ul>---->
+
+<!-----Conteúdo da página----->
+
+<section id="conteudo">
+
+    <h1>Notas de Atualização</h1>
+    <h2>Abaixo estão algumas atualizações do servidor</h2>
+
+    <h3>Atualização 1.0</h3>
+    <pre>
+    - Script de entrega de carga (Caminhoneiro); 
+    - Correção de alguns bugs;</pre>
+
+    <h3>Atualização 1.1</h3>
+    <pre>
+    - Adicionado emprego de segurança da Union;
+    - Modificações na casa da Mafia;
+    - Ajuste de preços da concessionaria;
+    - Adicionado Rapel + Câmera para o águia da Polícia <b>(Precisa ser testado);</b></pre>
+
+    <h3>Atualização 1.2</h3>
+    <pre>
+    - Adicionado emprego de Lixeiro;
+    - Agora será possível roubar ATMs pelo mapa <b>(Nem todas foram configuradas ainda)</b>;
+    - Agora será possivel roubar as Caixas Registradoras das lojas <b>(Precisa de alguns ajustes);</b></pre>
+
+</section>
+
+</body>
+</head>
+</html>

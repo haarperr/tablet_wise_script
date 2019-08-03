@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<head>
+
+    <style>
+    
+@import url('https://fonts.googleapis.com/css?family=Jockey+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Carrois+Gothic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Teko&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* -----INICIO----- */
+
+/*imagem do topo (serve para mudar todas as HTML)*/
+
+#header1 img {
+    width: 100%;
+}
+
+/*menu de navegação (serve para mudar todas as HTML)*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 50px;
+    overflow: hidden;
+    background-color: rgb(26, 26, 26);
+    transform: translateY(-10px);
+}
+  
+li {
+    float: left;
+}
+  
+li a {
+    font-family: 'Carrois Gothic SC', sans-serif;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 16px 20px;
+    text-decoration: none;
+    transition: 0.4s;
+    text-transform: uppercase;
+}
+  
+li a:hover {
+    background-color: rgb(49, 49, 49);
+}
+
+.activenav{
+    background: rgb(68, 68, 68);
+    color: rgb(12, 179, 129);
+    cursor: not-allowed;
+    display: block;
+}
+.active:hover{
+    background: rgb(68, 68, 68);
+}
+
+.discord{
+    font-family: 'Carrois Gothic SC', sans-serif;
+    display: block;
+    color: white;
+    padding: 20px 16px 20px;
+    text-decoration: none;
+    transition: 0.4s;
+    text-transform: uppercase;
+    float: right;
+    color: rgb(166, 190, 211);
+    transition: 0.5s;
+    cursor: pointer;
+    font-weight: 100;
+}
+
+.discord:hover{
+    color: rgb(87, 137, 182);
+}
+/*conteúdo (serve para mudar todas as HTML)*/
+
+#conteudo{
+    background: url(conteudobackground.png)no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+    padding: 20px 30px 20px 30px;
+    margin: 0;
+    transform: translateY(-10px);
+}
+
+#conteudo h1{
+    font-family: 'Teko', sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+#conteudo h2{
+    font-family: 'Abel', sans-serif;
+    color: rgb(160, 160, 160);
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+#conteudo h2::after{
+    content: '';
+    background: rgb(201, 201, 201);
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    height: 2px;
+    width: 97vw;
+}
+
+#conteudo h3{
+    font-family: 'Teko', sans-serif;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+#conteudo pre{
+    font-family: 'Abel', sans-serif;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: left;
+}
+
+
+#conteudo p{
+    font-style: italic;
+    font-weight: 600;
+}
+
+#conteudo a{
+    color: rgb(0, 92, 54);
+    font-weight: 600;
+    font-style: italic;
+}
+
+#conteudo b{
+    font-weight: 600;
+    font-size: 20px;
+    padding-right: 60px;
+}
+
+/*Footer (pé da página)
+#footer{
+    background: rgb(26, 26, 26);
+    height: 30px;
+    padding: 20px 10px 30px 10px;
+}
+
+#footer h1{
+    font-family: 'Abel', sans-serif;
+    font-size: 20px;
+    float: left;
+    color: white;
+    text-transform: uppercase;
+}
+
+#footer h2{
+    font-family: 'Abel', sans-serif;
+    font-size: 20px;
+    float: left;
+    color: rgb(85, 85, 85);
+    margin-left: 10px;
+    padding: 0;
+}
+
+#footer pre{
+    font-family: 'Abel', sans-serif;
+    font-size: 15px;
+    float: right;
+    color: grey;
+}*/
+
+/* COMANDOS */
+/* tabela */
+
+#tabela{
+    border-collapse: collapse;
+    width: 100%;
+    cursor: default; 
+    margin-bottom: 30px;  
+}
+
+#tabela td, #tabela th {     
+    border: 2px solid rgb(175, 175, 175, 0.3);
+    padding: 8px;
+}
+
+#tabela th {
+    width: 100px;
+    font-family: 'Abel', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    color: rgb(0, 0, 0);
+}
+
+#tabela td{
+    font-family: 'Abel', sans-serif; 
+    font-size: 20px;
+    font-weight: 100;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    color: rgb(0, 0, 0);
+}
+
+/* CÓDIGO PENAL */
+
+/* barra de pesquisa */
+#search {
+    resize: both;
+    width: 200px;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid rgb(221, 221, 221);
+    color: rgb(0, 126, 84);
+    margin-bottom: 12px;
+    border-radius: 30px;
+    outline: none;
+    float: right;
+}
+  
+  #tabelapenal {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+}
+  
+  #tabelapenal th, #tabelapenal td {
+    text-align: left;
+    padding: 12px;
+}
+  
+  #tabelapenal tr {
+    border-bottom: 1px solid #ddd; 
+}
+  
+  #tabelapenal tr.header, #tabelapenal tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* tabela */
+
+#tabelapenal {
+    border-collapse: collapse;
+    width: 100%;
+    cursor: default; 
+    margin-bottom: 30px;
+  }
+  
+  #tabelapenal td, #tabelapenal th {
+      
+    border: 2px solid rgb(175, 175, 175, 0.3);
+    padding: 8px;
+  }
+  
+  #tabelapenal tr:nth-child(even){background-color: rgb(207, 207, 207,0.5);}
+  
+  
+  #tabelapenal th {
+    font-family: 'Teko', sans-serif;
+    font-size: 25px;
+    font-weight: 100;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    color: rgb(0, 0, 0);
+  }
+
+  #tabelapenal td{
+    width: 150px;
+    font-family: 'Abel', sans-serif; 
+    font-size: 20px;
+    font-weight: 100;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    color: rgb(0, 0, 0);
+  }
+
+  .accordion {
+  font-family: 'Teko';
+  font-size: 24px; 
+  text-transform: uppercase;
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+.accordion:after {
+margin-top: 7px;
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: rgb(255, 255, 255)!important;
+  float: right;
+  margin-left: 5px;
+}
+.active{
+    color: rgb(0, 155, 103);
+    background: rgb(44, 44, 44);
+}
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.accordion:hover {
+    color: rgb(0, 0, 0);
+  background-color: rgb(211, 211, 211);
+}
+
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+    </style>
+
+<body>
+
+<!---imagem to topo--->
+
+<header id="header1"><img src="headerbackground.png"></header>
+
+<!---menu de navegação--->
+
+<ul id="navbar">
+    <li><a href="jobsfordummies.html">Início</a></li>
+    <li><a class="activenav" title="Você já está nas regras!">Regras</a></li>
+    <li><a href="hotties.html">Comandos</a></li>
+    <li><a href="laws.html">Código Penal</a></li>
+</ul>
+
+<!----Footer (pé da página)
+
+<ul id="footer">
+    <h1>Wise City ©</h1>
+    <pre>Versão 1.0</pre>
+    <h2>Todos os direitos reservados.</h2>
+</ul>---->
+
+<!-----Conteúdo da página----->
+
+<section id="conteudo">
+
+    <h1>Regras Gerais</h1>
+    <h2>Abaixo estão as regras principais do servidor;</h2>
+
+    <h3>Regras para todos:</h3>
+    <pre>
+            1 - Estritamente obrigatória a leitura de todas as regras deste servidor.
+            2 - Manter o respeito com todos os jogadores, tanto dentro como fora do RP.
+            3 - Fazer chamados para o DHHS a fim de estuprar, roubar, sequestrar e/ou matar será imediatamente banido do servidor.
+            4 - Qualquer dúvida procurar a equipe do Wise e os mesmos estarão os ajudando.
+            5 - Estritamente proibido o uso de programas ilegais e/ou programas para auxílio de mira a fim de se beneficiar dentro do RP.
+            6 - Reportar todo e qualquer tipo de bug encontrado dentro do jogo, caso abuse de bugs será banido do servidor.
+            7 - É proibido roubar viaturas (Departamento Policial, DHHS) sujeito a banimento.
+            8 - Sobre doações contatar somente a Staff, não nos responsabilizamos por pagamento a terceiros que não façam parte da equipe, então antes de fazer a doação certifique-se de que o mesmo faz parte da equipe Wise.
+            9 - Não será aceito nenhum comportamento homofóbico, racista ou xenófobo. 
+            10 - Proibido a divulgação/exposição de outros discord/servidores.
+            11 - Se o jogador acumular 3 avisos acarretará em seu banimento, tanto no discord quanto in-game.
+            12 - Ao logar no servidor é obrigatório estar no discord, caso não esteja estará perdendo sua whitelist. 
+            13 - Postagens pornográficas causará seu ban imediato, sem direito a desban.
+            14 - Forçar um jogador a votar a favor ou contra uma melhoria é estritamente proibido, caso isto ocorra o mesmo estará levando aviso 1.
+            15 - Proibido trocar dinheiro in-game por dinheiro real com outros jogadores, passivo de banimento.
+    </pre>
+
+    <h3>Práticas proibidas!</h3>
+    <pre style="border-bottom: 1px solid rgb(192, 192, 192)"><p>- Práticas de <a>MetaGaming</a>: </p>       Trazer informações de terceiros para dentro do RP, a fim de se beneficiar com a informação obtida;
+        <p>- Práticas de <a>PowerGaming</a>:</p>       Fazer algo que você não faria no seu cotidiano ou na vida real;
+        <p>- Práticas de <a>VDM</a>:</p>       Fazer o uso de um veículo a fim de tentar ou causar a morte de outro player sem motivo para o ato;
+        <p>- Práticas de <a>RDM</a>:</p>       Tentar ou causar a morte de outro jogador sem motivo algum;
+    </pre>
+
+    <button class="accordion"><c style="font-weight: bold">Regras para Civis</c></button>
+    <div class="panel">
+      <pre>     
+    1 - Proibido Combat Logging, ou seja, não poderá deslogar do servidor enquanto estiver
+    sendo abordado, sequestrado, morto, roubado, preso ou em fuga;
+
+    2 - Respeitar as autoridades da cidade Wise, qualquer desrespeito acarretará em punições;
+        2.1 - Respeitar o RP da DHHS, caso os mesmos indiquem que você tenha que ir até a clínica
+        para se tratar você deverá acatar;
+
+    3 - Qualquer prática obscena sem o consentimento da outra parte indicará como uma prática de
+    estupro, isto acarretará em punições severas (Esse RP não é permitido);
+
+    4 - Em caso de desmaio, inconsciência ou morte o mesmo deverá imediatamente cortar sua comunicação;
+        4.1 - Mesma coisa ocorre quando estiver algemado;
+        4.2 - Caso venha acontecer algo da natureza informado na regra "4" os mesmos não lembrarão de
+        nada que tenha acontecido;
+
+    5 - Se algum player cometer um anti-rp, terão que reportar na ala de denúncias aqui no discord;
+        5.1 - Em hipótese alguma poderá praticar um outro ato de anti-rp com alguém que tenha praticado
+        anti-rp com você;
+
+    6 - Proibido negar RG enquanto estiver morto, inconsciente ou desmaiado;
+
+    7 - Fazer sempre um RP prévio ao pegar o RG;
+        7.1 - Enquanto estiver desmaiado, inconsciente ou desmaiado é proibido negar-se a abrir o 
+        porta malas do veículo ou levantar o banco da moto;
+        7.2 - Deverá haver um RP prévio ao abrir o porta malas ou banco da moto;
+
+    8 - As regras poderão ser alteradas caso necessário, se isto vier ocorrer serão avisados na ala de
+    atualizações aqui no discord;
+
+    9 - Respeitar as leis de trânsito da cidade, caso dirija batendo em prédios, passando por cima de 
+    calçada e afins será considerado falta de amor a vida;
+        9.1 - Em todas as hipóteses possuir amor a vida;
+
+    10 - Utilizar o /ilegal ou /anonimo a fim de constranger, ofender ou resolver brigas que não sejam
+    referentes ao RP levará aviso 1;
+        10.1 - /olx é destinados a vendas de produtos dentro do RP, não será permitido conversas que 
+        não sejam sobre vendas;
+        10.2 - O / deverá ser usado apenas pela DHHS, exceto se algum civil precisar saber se há Equipe DHHS
+        em expediente na cidade;
+        10.3 - Utilizar o / para alertar sobre ações, quantos pm's estão em patrulha, comunicar-se com 
+        outros órgãos policiais ou perguntar se há policiais disponíveis na Delegacia de Polícia;
+        10.4 - /twt deverá ser utilizado para conversação dentro do RP, qualquer mensagem que não seja 
+        referente ao RP deverá ser desconsiderada;
+        10.5 - Não deverá utilizar os canais de comunicações citados acima para tirar dúvidas de erros ou afins,
+        deverá contatar algum Suporte no discord;
+
+    11 - Organizações, tanto Militares quanto Criminosas deverão utilizar seus respectivos canais de 
+    voz no discord;
+
+    12 - A pessoa só estará executada até que alguém venha até ela e atire contra mesma novamente;
+        12.1 - Atirar contra uma pessoa de uma longa distância a mesma não estará executada e poderá 
+        ser socorrida pelo DHHS;
+        12.2 - Não poderá efetuar chamados para o DHHS se estiver executado, caso isto ocorra o mesmo 
+        estará sendo advertido;
+
+    13 - Forçar RP tanto com a Policia ou com as organizações criminosas, será considerado como anti-rp;
+        13.1 - Ficar dificultando o procedimento da DHHS de reanimação de outro cidadão também será 
+        considerado anti-rp e o mesmo receberá aviso 1;
+
+    14 - Proibido carregar pessoas mortas ou desmaiadas no colo do passageiro, caso não tenha DHHS em 
+    expediente o mesmo deverá colocar o indivíduo ferido ou desmaiado no banco de trás do veículo;
+
+    15 - Ficar passando na praça com veículos em alta velocidade ou ficar empinando motos será advertido
+    verbalmente, caso o mesmo continue estará recebendo punições;
+        15.1 - Disparar com arma de fogo, tentar agredir ou usar arma branca a fim de atingir outro indivíduo
+        na praça será punido com aviso 1;
+
+    16 - Dentro do servidor não existe fora do RP, qualquer assunto relacionado a isso deverá ser conversado
+    na sala suporte.
+
+    17 - Proibido fazer chamados de empregos legais para afim de assaltar e/ou fazer de refém;
+        17.1 - Proibido fazer chamados de empregos legais e ao término do serviço não pagar pelo serviço 
+        prestado; 
+
+    18 - Totalmente proibido lootear policiais fora da favela ou ações de roubo a banco, lojinha e 
+    negociação de refém;
+
+    19 - Você deve obrigatoriamente criar um RG ao entrar pela primeira vez no servidor, caso seja pego 
+    com RG default estará sendo preso por pena máxima (90 meses) na primeira vez e na próxima estará 
+    recebendo um Aviso como forma de punição;
+
+    20 - Proibido deletar itens ou carro durante uma abordagem ou perseguição;
+
+    21 - Proibido correr ou pular enquanto algemado;
+
+    22 - Proibido atirar de dentro de  veículos blindados;
+
+    23 - Proibido atirar com veículo em movimento enquanto estiver no banco do motorista (para atirar
+    enquanto estiver no banco do motorista o carro deverá estar parado ou na velocidade máxima de 30 km/h);
+    
+    24 - Não é permitido interferir em ações em que não envolva seu grupo e/ou amigos;
+    
+    25 - Proibido pousar aeronaves em tetos de prédios ou casas, ruas, rodovias;
+        25.1 - Os pousos deverão ser feitos em heliportos, aeroportos e campos abertos.
+    
+    26 - É terminantemente proibido o uso de armas de fogo e/ou máscaras em áreas safes.
+       
+<a>Safezones: Hospital, Departamento de Polícia, Concessionária, Prefeitura e Garagem.</a></pre>
+    </div>
+    
+    <button class="accordion"><c style="font-weight: bold">Regras para [DP]</c> - Departamendo de Polícia</button>
+    <div class="panel">
+      <pre>
+<a>- Departamento:</a> 
+
+    1 - Esta liberado patrulhar sozinho, porem o policial deverá portar somente 1 pistola como
+    arma de fogo.
+        1.1 - Armas de alto calibre so serão liberadas em patrulhas com 2 ou mais policiais, e
+        somente um policial da Viatura poderá porta-la.
+        1.2 - Ao dar voz de prisão a um criminoso, o mesmo tem direito a chamar um advogado.
+        1.3 - Apenas o Superior no dia pode dar voz de prisão.
+        1.4 - Só pode prender um criminoso após levá-lo para dentro da delegacia e colocá-lo
+        dentro da cela.
+        1.5 - Só ficar no rádio da Polícia (VTR 1, VTR2, VTR NORTE 01 e 02 no Discord) quem 
+        estiver patrulhando.
+        1.6 - Obrigatório avisar para cidade se tem Policia em PTR. (manter o aviso sempre
+        atualizado)
+        1.7 - Caso retirem sua comunicação, você não deve passar qualquer informação pelo
+        telefone ou COPOM/mutar no discord.
+        1.8 - Sempre efetuar um bom RP: avisar que retirou o celular/armas dele, que você está
+        revistando seus bolsos, pedindo rg, pedindo carteira de motorista, etc.
+            1.8.1 - Assim que algemado, a comunicação deverá ser cortada. Caso não corte estará
+            sujeito a punições.
+        1.9 - Se ficar ausente por mais de 2 dias avisar para o Comandante da sua guarnição
+        (punição/expulsão se não avisar).
+        1.10 - Proibido alterar viatura na Oficina.
+        1.11 - Proibido abandonar VTR no meio da cidade.
+
+    2 - Nenhum membro da polícia pode retirar armamento de dentro da delegacia e vender/entregar
+    para amigos. Caso isto ocorra o mesmo será banido do servidor.
+    
+    3 - Membros da corporação são obrigados a respeitar e valorizar a vida dos abordados e/ou
+    parceiros de serviço.
+    
+    4 - Polícia pode utilizar o Veiculo Blindado em operações caso o superior julgue necessário.
+    
+    5 - Polícia não pode em hipótese alguma andar mascarado quando estiver como civil (sem farda).
+    
+    6 - É PROIBIDO abordar sem motivo.
+
+<a>- Abordagem e Emboscadas:</a>
+        
+    1 - Toda ação feita durante abordagens da Policia e emboscadas contra a Policia deve ter algum RP
+    de rendição que antecede o tiroteio;
+        1.1 - Policiais só devem abrir fogo caso o suspeito apresente algum tipo de risco a vida dos
+        policiais ou dos cidadãos. Lembrando que o objetivo da Policia sempre é neutralizar o 
+        suspeito e não matá-lo.
+        1.2 - Se as pessoas de FORA da abordagem atirarem nos envolvidos a ação será considerada RDM,
+        pois deve ocorrer um RP prévio para quem não está na abordagem;
+        1.3 - A execução de policiais só é permitida em zonas de PVP e/ou ações de sequestro do policial;
+        1.4 - CHAMAR REFORÇO: só será permitido chamar reforço caso o policial na abordagem não 
+        confisque os meios de comunicação ou algeme a pessoa.
+        1.5 - PROIBIDO qualquer disparo contra o infrator que esteja dando fuga da guarnição, o objetivo
+        é fazer uma perseguição bacana para ambos os lados
+        1.6 - Caso o infrator que empreendeu fuga da guarnição dispare contra a viatura, a regra 1.5 
+        é anulada e os policiais estao permitidos a disparar também.
+    
+    2 - A Polícia ou o FIB não podem patrulhar ou rondar em locais de coleta de drogas ou no local de
+    lavagem de dinheiro até que a Polícia Federal apresente provas de que aquele local seja da lavagem
+    de dinheiro ou da coleta de drogas.
+      </pre>
+    </div>
+    
+    <button class="accordion"><c style="font-weight: bold">Regras para [FIB]</c> - Federal Investigation Bureal</button>
+    <div class="panel">
+    <pre>
+    <a>- Departamento:</a>
+
+    1 - Manter o respeito com a hierarquia.
+
+    2 - Em hipótese alguma poderá se sentir superior aos cidadãos da cidade.
+
+    3 - A FIB tem o dever de intervir assaltos de ruas sempre que possível em prol da cidade.
+
+    4 - A última palavra que vale é a do Delegado.
+
+    5 - A FIB tem jurisdição para atuar tanto na cidade como no norte.
+
+    6 - Mandados de prisão deverá ser cumprido por agentes da FIB, sempre com a presença do Delegado.
+
+    7 - Proibido qualquer tipo de corrupção, tanto ativo quanto passiva dentro da FIB, se for pego
+    em corrupção será banido.
+
+    8 - O agente da FIB deverá preservar sua identidade e jamais afirmar para qualquer um sua 
+    verdadeira profissão.
+
+    9 - Proibido o uso de mascara fora do serviço, então preserve sua identidade como afirma a regra 8.
+
+    10 - Os agentes da FIB poderão utilizar qualquer tipo de armamento, exceto Estagiário, que 
+    deverá fazer o uso de no máximo uma SMG.>
+      </pre>
+    </div>
+    
+    <button class="accordion"><c style="font-weight: bold">Regras para [DHHS]</c> - Departament of Health & Human Services</button>
+    <div class="panel">
+      <pre>
+    <a>- Departamento:</a>
+
+    1 - É extremamente proibido cometer qualquer tipo de crime, ou portar algum armamento;
+        1.1 - Proibido cancelar a animação da reanimação;
+        1.2 - Caso não estiver em serviço, retire o uniforme (caso queira sair da corporação,
+        fale com algum superior antes);
+        1.3 - O Águia do DHHS somente deverá ser utilizado em chamados de 4km ou mais, para um
+        atendimento rápido;
+        1.4 - Após reviver o jogador, perguntar se ele precisa ir ao hospital para cuidar dos
+        ferimentos (se curar);
+        1.5 - Proibido carona na viatura da DHHS, muito menos no águia (a não ser que seja 
+        para o hospital para os devidos procedimentos);
+        1.6- Caso o cidadão esteja gravemente ferido, é obrigatório levar o mesmo para o hospital;
+        1.7 - Caso ele se negue ir até o hospital o paramédico tem o direito de utilizar uma 
+        algema para conter o cidadão e levar até o hospital;
+        1.8 - Caso o paramédico da DHHS se negue a realizar o procedimento médico adequado 
+        em certas situações será retirado da DHHS imediatamente;
+        1.9 - Os chamados da Policia devem ser atendidos com prioridade, ou seja, antes dos demais;
+    
+    2.0 - É obrigatório bater ponto na sala #bater-ponto  todas vezes que você entrar em serviço,
+    ao sair você irá editar a postagem colocando o horário da saída;
+        2.1 - Respeitar todos os colegas de trabalho independente de qualquer situação, 
+        problemas entre a equipe deve ser repassada ao diretor;
+        2.2 - Proibido fornecer serviço medico particular, como para facções por exemplo;
+        2.3 - DHHS não lê /ilegal, para se comunicar com a DHHS utilize exclusivamente o /192.
+      </pre>
+    </div>
+    
+    <button class="accordion"><c style="font-weight: bold">Regras para [ORG]</c> - Organizações</button>
+    <div class="panel">
+      <pre>
+<a>- GANGUES: <a style="color: rgb(255, 230, 0);">Vagos </a>,<a style="color: rgb(98, 0, 128);"> Ballas</a></a>
+
+    1 - Bairros não tem PVP liberado, contudo antes de qualquer assassinato ou troca de tiro 
+    deve acontecer um RP prévio. (Obs.: bairros são áreas de risco, com isso o respeito com o 
+    próximo deverá ser maior do que em qualquer outro lugar.)
+    2 - Todo bairro é dominado por uma gangue.
+        2.1 - Deve ser feito por todas as gangues a cobrança da taxa de segurança dos moradores
+        e permissão de moradia nos barracos (todas devem realizar o registro na sala de moradores
+        autorizados no Discord do servidor).
+        2.2 - Cabe a gangue vender a localização do ponto de venda de drogas do seu bairro (todas
+        devem realizar o registro na sala de vendedores autorizados no Discord do servidor).
+
+<a style="color: rgb(122, 71, 23)">- MÁFIA:</a>
+
+    1 - A Máfia é responsável por realizar o tráfico e produção de armas.
+        1.1 - Também é responsável por vender as localizações dos pontos processamento de drogas
+        para os civis.
+    2 - Somente as gangues podem comprar armas com a Máfia.
+    3 - A Máfia pode encerrar a qualquer momento o contrato de fornecimento de armas caso ocorra
+    algum conflito com a gangue.
+    4 - A Máfia pode produzir no máximo 100 armas por mês, caso seja pego fabricando mais do que
+    o permitido o infrator receberá um Aviso e será expulso do grupo.
+    5 - Deve ser seguido um padrão para o preço de venda de armas, podendo haver descontos somente
+    em encomendas de grande quantia.
+    6 - O limite de membros da Máfia é de 8.
+
+<a style="color: red">- Resgates na DP:</a>
+
+    1 - Qualquer resgate deverá ser avisado 5 minutos antes do mesmo ocorrer, e a polícia não poderá
+    prender antes dos 5 minutos caso seja avisado, caso prenda estará sofrendo punições.
+    2 - Os bandidos devem portar no mínimo 2 armas de grosso calibre (shotgun, assault rifle, sub smg)
+    para iniciar uma ação de resgate.
+    3 - Todas celas e portas da DP deverão estar abertas.
+    4 - A polícia será permitida utilizar gás lacrimogênio para conter os bandidos (sendo seguida a
+    regra de limite imposto por cada subdivisão).
+    5 - Se os policiais conseguirem conter os bandidos, eles poderão chamar o DHHS e reviver os
+    bandidos para efetuar a prisão.
+    6 - Caso os bandidos vençam, eles devem retirar o seu companheiro da DP.
+    7 - Não deve haver policiais fora da DP durante a ação de resgate.
+    8 - Os invasores poderão ir somente com 3 a mais do que a polícia (sem contar o que será 
+    resgatado).
+    9 - Os policiais não poderão ser resgatados pelo DHHS após o término da ação.
+    10 - Os bandidos não podem obrigar a polícia a retirar armas do arsenal.
+    11 - Os bandidos podem lootear os policiais.
+    12 - Caso reste 1 policial e ele se renda, os bandidos podem solicitar 2 coletes para não
+    matar ele.
+        12.1 - O policial que se render não poderá matar os bandidos após se render.
+    13 - Ao restar 1 policial ou bandido os mesmos terão 5 minutos para invadir, se render
+    ou fugir.>
+      </pre>
+    </div>
+    
+    <script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+    </script>
+
+
+</section>
+
+</body>
+</head>
+</html>

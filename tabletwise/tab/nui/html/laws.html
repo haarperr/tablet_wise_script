@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<head>
+
+    <style>
+    
+        @import url('https://fonts.googleapis.com/css?family=Jockey+One&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Carrois+Gothic+SC&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Teko&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
+        
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* -----INICIO----- */
+        
+        /*imagem do topo (serve para mudar todas as HTML)*/
+        
+        #header1 img {
+            width: 100%;
+        }
+        
+        /*menu de navegação (serve para mudar todas as HTML)*/
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding-left: 50px;
+            overflow: hidden;
+            background-color: rgb(26, 26, 26);
+            transform: translateY(-10px);
+        }
+          
+        li {
+            float: left;
+        }
+          
+        li a {
+            font-family: 'Carrois Gothic SC', sans-serif;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 20px 16px 20px;
+            text-decoration: none;
+            transition: 0.4s;
+            text-transform: uppercase;
+        }
+          
+        li a:hover {
+            background-color: rgb(49, 49, 49);
+        }
+        
+        .active{
+            background: rgb(68, 68, 68);
+            color: rgb(12, 179, 129);
+            cursor: not-allowed;
+            display: block;
+        }
+        .active:hover{
+            background: rgb(68, 68, 68);
+        }
+        
+        .discord{
+            font-family: 'Carrois Gothic SC', sans-serif;
+            display: block;
+            color: white;
+            padding: 20px 16px 20px;
+            text-decoration: none;
+            transition: 0.4s;
+            text-transform: uppercase;
+            float: right;
+            color: rgb(166, 190, 211);
+            transition: 0.5s;
+            cursor: pointer;
+            font-weight: 100;
+        }
+        
+        .discord:hover{
+            color: rgb(87, 137, 182);
+        }
+        /*conteúdo (serve para mudar todas as HTML)*/
+        
+        #conteudo{
+            background: url(imgs/conteudobackground.png)no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            height: 100%;
+            padding: 20px 30px 20px 30px;
+            margin: 0;
+            transform: translateY(-10px);
+        }
+        
+        #conteudo h1{
+            font-family: 'Teko', sans-serif;
+            font-size: 40px;
+            text-transform: uppercase;
+        }
+        
+        #conteudo h2{
+            font-family: 'Abel', sans-serif;
+            color: rgb(160, 160, 160);
+            font-style: italic;
+            font-size: 18px;
+            font-weight: 100;
+        }
+        
+        #conteudo h2::after{
+            content: '';
+            background: rgb(201, 201, 201);
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            height: 2px;
+            width: 95vw;
+        }
+        
+        #conteudo h3{
+            font-family: 'Teko', sans-serif;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+        
+        #conteudo pre{
+            font-family: 'Abel', sans-serif;
+            margin-bottom: 20px;
+            font-size: 20px;
+            text-align: left;
+        }
+        
+        #conteudo pre::after{
+            content: '';
+            background: rgb(201, 201, 201);
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            height: 2px;
+            width: 95vw;
+        }
+        
+        #conteudo p{
+            font-style: italic;
+            font-weight: 600;
+        }
+        
+        #conteudo a{
+            color: rgb(0, 92, 54);
+            font-weight: 600;
+            font-style: italic;
+        }
+        
+        #conteudo b{
+            font-weight: 600;
+            font-size: 20px;
+            padding-right: 60px;
+        }
+        
+        /*Footer (pé da página)
+        #footer{
+            background: rgb(26, 26, 26);
+            height: 30px;
+            padding: 20px 10px 30px 10px;
+        }
+        
+        #footer h1{
+            font-family: 'Abel', sans-serif;
+            font-size: 20px;
+            float: left;
+            color: white;
+            text-transform: uppercase;
+        }
+        
+        #footer h2{
+            font-family: 'Abel', sans-serif;
+            font-size: 20px;
+            float: left;
+            color: rgb(85, 85, 85);
+            margin-left: 10px;
+            padding: 0;
+        }
+        
+        #footer pre{
+            font-family: 'Abel', sans-serif;
+            font-size: 15px;
+            float: right;
+            color: grey;
+        }*/
+        
+        /* COMANDOS */
+        /* tabela */
+        
+        #tabela{
+            border-collapse: collapse;
+            width: 100%;
+            cursor: default; 
+            margin-bottom: 30px;  
+        }
+        
+        #tabela td, #tabela th {     
+            border: 2px solid rgb(175, 175, 175, 0.3);
+            padding: 8px;
+        }
+        
+        #tabela th {
+            width: 100px;
+            font-family: 'Abel', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            color: rgb(0, 0, 0);
+        }
+        
+        #tabela td{
+            font-family: 'Abel', sans-serif; 
+            font-size: 20px;
+            font-weight: 100;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            color: rgb(0, 0, 0);
+        }
+        
+        /* CÓDIGO PENAL */
+        
+        /* barra de pesquisa */
+        #search {
+            resize: both;
+            width: 200px;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid rgb(221, 221, 221);
+            color: rgb(0, 126, 84);
+            margin-bottom: 12px;
+            border-radius: 30px;
+            outline: none;
+            float: right;
+        }
+          
+          #tabelapenal {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid #ddd;
+            font-size: 18px;
+        }
+          
+          #tabelapenal th, #tabelapenal td {
+            text-align: left;
+            padding: 12px;
+        }
+          
+          #tabelapenal tr {
+            border-bottom: 1px solid #ddd; 
+        }
+        
+        /* tabela */
+        
+        #tabelapenal {
+            border-collapse: collapse;
+            width: 100%;
+            cursor: default; 
+            margin-bottom: 30px;
+          }
+          
+          #tabelapenal td, #tabelapenal th {
+              
+            border: 2px solid rgb(175, 175, 175, 0.3);
+            padding: 8px;
+          }
+          
+          #tabelapenal tr:nth-child(even){background-color: rgb(207, 207, 207,0.5);}
+          
+          
+          #tabelapenal th {
+            font-family: 'Teko', sans-serif;
+            font-size: 25px;
+            font-weight: 100;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            color: rgb(0, 0, 0);
+          }
+        
+          #tabelapenal td{
+            width: 150px;
+            font-family: 'Abel', sans-serif; 
+            font-size: 20px;
+            font-weight: 100;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            color: rgb(0, 0, 0);
+          }
+        
+            </style>
+
+<body>
+
+<!---imagem to topo--->
+
+<header id="header1"><img src="headerbackground.png"></header>
+
+<!---menu de navegação--->
+
+<ul id="navbar">
+    <li><a href="jobsfordummies.html">Início</a></li>
+    <li><a href="rulesforassholes.html">Regras</a></li>
+    <li><a href="hotties.html">Comandos</a></li>
+    <li><a class="active" title="Você já está no código penal!">Código Penal</a></li>
+</ul>
+
+<!----Footer (pé da página)
+
+<ul id="footer">
+    <h1>Wise City ©</h1>
+    <pre>Versão 1.0</pre>
+    <h2>Todos os direitos reservados.</h2>
+</ul>---->
+
+<!-----Conteúdo da página----->
+
+<section id="conteudo">
+    
+    <h1>Código Penal</h1>
+    <h2>*Os locais que conter ( - ) significa que não existem informações para eles!</h2>
+       
+    <h3>Observações Gerais</h3><pre style="font-size:1vw">
+            01. A posse legal de drogas é de até 3 unidades. Caso passe desta quantidade, o mesmo será preso pelo crime de Trafico de Drogas.
+            02. Veículos são apreendidos quando o mesmo é utilizado em ações na qual o condutor ou qualquer passageiro atenta contra a vida de um policial utilizando uma arma de fogo.
+            03. Conversas entre suspeitos e advogados são confidenciais. Respeite o espaço para que eles possam conversar sem interrupcões.
+            04. Cada minutos de prisão pode ser convertido em $1.000. Crimes Nível 2 não estão sujeitos a fiança.
+            05. O limite maximo de uma pena é de 80 minutos. Porém, pode passar disto caso o mesmo atente contra a vida de outra pessoa.</pre>
+
+<input type="text" id="search" class="search" onkeyup="myFunction()" placeholder="Pesquisar por crime" style="background: lightgrey; font-style: 'abel'">
+<i class="fas fa-search" style="float: right; margin-right: -30px; margin-top: 15px; color: rgb(136, 136, 136); font-wight: 100;"></i>
+
+    <h3>Crimes Gerais</h3>    
+    <table id="tabelapenal">
+        <tr style="text-transform: uppercase; background: rgb(221, 221, 221); letter-spacing: 5px">
+          <th>Crime</th>
+          <th>Pena <a style="text-transform: lowercase; letter-spacing: 0; font-size:16px; font-weight: 100;"> (em minutos)</a></th>
+          <th>Multa</th>
+          <th>Fiança</th>
+          <th>Observações</th>
+        </tr>
+        <tr>
+          <td>Atropelamento </td>
+          <td>12</td>
+          <td>-</td>
+          <td>Sem fiança</td>
+          <td>Prender apenas se houver mortos.</td>
+        </tr>
+        <tr>
+          <td>Alta velocidade</td>
+          <td>-</td>
+          <td>2.000 </td>
+          <td>-</td>
+          <td>Velocidade maxima: Cidade - 80KM / Alto Estradas - 120KM</td>
+        </tr>
+        <tr>
+          <td>Andar sem capacete (MOTO) </td>
+          <td>-</td>
+          <td>1.500</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Dirigir sem CNH</td>
+          <td>-</td>
+          <td>1.000</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Dirigir embriagado</td>
+          <td>-</td>
+          <td>1.000</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Usar buzina policial</td>
+          <td>10</td>
+          <td>500</td>
+          <td>3000</td>
+          <td>-</td>
+         </tr>
+         <tr>
+            <td>Poluição sonora</td>
+            <td>-</td>
+            <td>2000</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+          <td>Estacionar em local proibido</td>
+          <td>-</td>
+          <td>3000</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Abandonar veículo</td>
+          <td>-</td>
+          <td>3000</td>
+          <td>-</td>
+          <td>Apreender veículo</td>
+        </tr>
+        <tr>
+          <td>Veículo clonado</td>
+          <td>15</td>
+          <td>5000</td>
+          <td>3500</td>
+          <td>Utilizar veículo com placa clonada</td>   
+        </tr>
+        <tr>
+          <td>Uso de roupas policiais</td>
+          <td>-</td>
+          <td>20000</td>
+          <td>-</td>
+          <td>Utilizar roupa ou acessórios</td>
+        </tr>
+        <tr>
+          <td>Posse/Porte ilegal de arma</td>
+          <td>10</td>
+          <td>5000</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Tentativa de roubo ao banco</td>
+          <td>30</td>
+          <td>-</td>
+          <td>Sem fiança</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Tentativa de roubo a uma loja ou ATM</td>
+          <td>5</td>
+          <td>2500</td>
+          <td>Sem fiança</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Tentativa de roubo a joalheria </td>
+          <td>20</td>
+          <td>-</td>
+          <td>Sem fiança</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Resistencia a Prisão</td>
+          <td>5</td>
+          <td>-</td>
+          <td>Sem fiança</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Omissão de socorro</td>
+          <td>5</td>
+          <td>-</td>
+          <td>Sem fiança</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Dano ao patrimonio</td>
+          <td>10</td>
+          <td>6000</td>
+          <td>3000</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Furto</td>
+          <td>10</td>
+          <td>-</td>
+          <td>3000</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Utilizar máscara</td>
+          <td>-</td>
+          <td>1500</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Queima de provas</td>
+          <td>5</td>
+          <td>5000</td>
+          <td>1500</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Extorção</td>
+          <td>24</td>
+          <td>5000</td>
+          <td>Sem fiança</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Falsidade Ideológica</td>
+          <td>10</td>
+          <td>-</td>
+          <td>2000</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Invasão de propriedade</td>
+          <td>20</td>
+          <td>-</td>
+          <td>4000</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Fraude</td>
+          <td>12</td>
+          <td>3000</td>
+          <td>2000</td>
+          <td>Falsa testemunha, denúncia caluniosa, etc</td>
+        </tr>
+        <tr>
+          <td>Desacato à autoridade</td>
+          <td>5</td>
+          <td>2500/desacato</td>
+          <td>Sem fiança</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Calunia</td>
+          <td>5</td>
+          <td>-</td>
+          <td>1500</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Atentado ao pudor</td>
+          <td>10</td>
+          <td>5000</td>
+          <td>2000</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Assédio</td>
+          <td>4</td>
+          <td>10000</td>
+          <td>Sem fiança</td>
+          <td>-</td>
+        </tr>
+        <tr>
+            <td>Furto de veículo</td>
+            <td>10</td>
+            <td>5000</td>
+            <td>2500</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Assalto a mão armada</td>
+            <td>10</td>
+            <td>-</td>
+            <td>Sem fiança</td>
+            <td>Inclui armas brancas</td>
+            </tr>
+        <tr>
+          <td>Homicídio Doloso</td>
+          <td>30</td>
+          <td>-</td>
+          <td>Sem fiança</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Homicídio Culposo</td>
+          <td>12</td>
+          <td>5000</td>
+          <td>-</td>
+          <td>*Fiança apenas com presença de advogado <c style="font-size: 14px; font-style:italic;">(valores entre 1500 a 5000)</c></td>
+        </tr>
+        <tr>
+          <td>Tentativa de Homicídio</td>
+          <td>20</td>
+          <td>-</td>
+          <td>Sem fiança</td>
+          <td>-</td>
+        </tr>
+        <tr>
+        <td>Homicídio <a style="font-style: normal;font-size: 15px;">(Policial)</a></td>
+        <td>40</td>
+        <td>5000/policial</td>
+        <td>Sem fiança</td>
+        <td>-</td>
+        </tr>
+        <tr>
+        <td>Homicídio <a style="font-style: normal;font-size: 15px;">(Refém)</a></td>
+        <td>50</td>
+        <td>10000/refém</td>
+        <td>Sem fiança</td>
+        <td>-</td>
+        </tr>
+        <tr>
+          <td>Estelionato</td>
+          <td>12</td>
+          <td>4000</td>
+          <td>Sem fiança</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Tortura</td>
+          <td>30</td>
+          <td>15000</td>
+          <td>Sem fiança</td>
+          <td>-</td>
+        </tr>
+        <tr>
+        <td>Tráfico (maconha, tartaruga)</td>
+        <td>2</td>
+        <td>-</td>
+        <td>Sem fiança</td>
+        <td>Para cada 1 item ilegal além do permitido (3 unidades) = meio minuto a mais de pena</td>
+        </tr>
+        <tr>
+        <td>Sequestro</td>
+        <td>20</td>
+        <td>2000/refém</td>
+        <td>Sem fiança</td>
+        <td>-</td>
+        </tr>
+</table>
+
+<script>
+  function myFunction() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("search");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("tabelapenal");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      } 
+    }
+  }
+  </script>
+
+</section>
+
+</body>
+</head>
+</html>
